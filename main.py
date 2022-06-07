@@ -5,20 +5,22 @@ import time
 
 grid = []
 
-# TODO: Automatic input with Web scraping for https://sudoku.com/expert/
+# TODO: Automatic input with Web scraping for https://www.nytimes.com/puzzles/sudoku/hard
 
-while True:
-    row = list(input('Row: '))
-    ints = []
+def manual_input_sudoku():
+    while True:
+        row = list(input('Row: '))
+        ints = []
 
-    for n in row:
-        ints.append(int(n))
-    grid.append(ints)
+        for n in row:
+            ints.append(int(n))
+        grid.append(ints)
 
-    if len(grid) == 9:
-        break
-    print('Row '+ str(len(grid)) + ' Complete')
+        if len(grid) == 9:
+            break
+        print('Row '+ str(len(grid)) + ' Complete')
 
+manual_input_sudoku()
 time.sleep(3)
 
 def possible(x, y, n):
